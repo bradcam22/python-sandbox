@@ -3,6 +3,9 @@ FROM python:3.9
 WORKDIR /app
 ADD . /app
 
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
 # Set up Python interactive prompt to use fancy readline.
 ENV PYTHONSTARTUP=/root/.pythonrc
 RUN echo "import rlcompleter, readline\nreadline.parse_and_bind('tab: complete')" > $PYTHONSTARTUP

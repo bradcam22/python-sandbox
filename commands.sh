@@ -2,8 +2,14 @@ work() {
     docker run -it -v /Users/bradleycameron/python-sandbox:/app python-sandbox
 }
 
-play() {
-    python your-script.py
+run_gpt() {
+    python gpt_prompt.py
 }
 
-export -f play
+run_bubble_sort() {
+    python bubble_sort.py
+}
+
+export -f work
+export -f run_gpt
+export -f run_bubble_sort
